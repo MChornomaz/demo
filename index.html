@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- BOOTSTRAP CSS  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css?_v=20240106130840" rel="stylesheet"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css?_v=20240107033917" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <!-- CUSTOM STYLES -->
-    <link rel="stylesheet" href="css/style.min.css?_v=20240106130840">
+    <link rel="stylesheet" href="css/style.min.css?_v=20240107033917">
     <title>Ytel | Main</title>
 </head>
 
@@ -20,61 +20,573 @@
         <div class="page-content">
             <!-- SIDEBAR STARTS  -->
             <aside class="sidebar">
-                Sidebar
+                <div class="sidebar--top">
+                    <div class="sidebar__logo">
+                        <picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt="Ytel logo"></picture>
+                    </div>
+                    <div class="sidebar__select">
+                        <h5 class="sidebar__title">Select Campaign</h5>
+                        <select class="form-select">
+                            <option selected value="1">Campaign 1 | Testing</option>
+                            <option value="2">Campaign 2 | Testing</option>
+                            <option value="3">Campaign 3 | Testing</option>
+                        </select>
+                    </div>
+
+                    <h5 class="sidebar__title">Tools</h5>
+
+                    <ul class="sidebar__tools-list">
+                        <li class="sidebar__tool-item" id="mDialBtn">
+                            <div class="sidebar__icon-container">
+                                <svg height="48" viewBox="0 0 48 48" width="48">
+                                    <path d="M0 0h48v48H0z" fill="none" />
+                                    <path
+                                        d="M24 38c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zM12 2C9.79 2 8 3.79 8 6s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 12c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 12c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm24-16c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM24 26c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm12 0c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0-12c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm-12 0c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0-12c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z" />
+                                </svg>
+                            </div>
+                            <p>M Dial</p>
+                        </li>
+                        <li class="sidebar__tool-item">
+                            <div class="sidebar__icon-container">
+                                <svg enable-background="new 0 0 48 48" height="48px" viewBox="0 0 48 48" width="48px">
+                                    <path clip-rule="evenodd"
+                                        d="M37,47H11c-2.209,0-4-1.791-4-4V5c0-2.209,1.791-4,4-4h18.973  c0.002,0,0.005,0,0.007,0h0.02H30c0.32,0,0.593,0.161,0.776,0.395l9.829,9.829C40.84,11.407,41,11.68,41,12l0,0v0.021  c0,0.002,0,0.003,0,0.005V43C41,45.209,39.209,47,37,47z M31,4.381V11h6.619L31,4.381z M39,13h-9c-0.553,0-1-0.448-1-1V3H11  C9.896,3,9,3.896,9,5v38c0,1.104,0.896,2,2,2h26c1.104,0,2-0.896,2-2V13z M33,39H15c-0.553,0-1-0.447-1-1c0-0.552,0.447-1,1-1h18  c0.553,0,1,0.448,1,1C34,38.553,33.553,39,33,39z M33,31H15c-0.553,0-1-0.447-1-1c0-0.552,0.447-1,1-1h18c0.553,0,1,0.448,1,1  C34,30.553,33.553,31,33,31z M33,23H15c-0.553,0-1-0.447-1-1c0-0.552,0.447-1,1-1h18c0.553,0,1,0.448,1,1C34,22.553,33.553,23,33,23  z"
+                                        fill-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <p>Scripts</p>
+                        </li>
+                        <li class="sidebar__tool-item">
+                            <div class="sidebar__icon-container">
+                                <svg viewBox="0 0 64 64">
+                                    <g data-name="File Checklist">
+                                        <path
+                                            d="M46 41a11 11 0 1 0 11 11 11.013 11.013 0 0 0-11-11zm0 20a9 9 0 1 1 9-9 9.01 9.01 0 0 1-9 9z"
+                                            style="fill:#28282b" />
+                                        <path
+                                            d="m49.231 48.36-4.3 5.159-2.226-2.226a1 1 0 0 0-1.414 1.414l3 3A1 1 0 0 0 45 56h.045a1 1 0 0 0 .724-.359l5-6a1 1 0 0 0-1.538-1.28zM32 51H9V3h26v9a1 1 0 0 0 1 1h9v25a1 1 0 0 0 2 0V12a1.1 1.1 0 0 0-.293-.707l-10-10A1.1 1.1 0 0 0 36 1H8a1 1 0 0 0-1 1v50a1 1 0 0 0 1 1h24a1 1 0 0 0 0-2zm11.586-40H37V4.414z"
+                                            style="fill:#28282b" />
+                                        <path
+                                            d="M13 8h18a1 1 0 0 0 0-2H13a1 1 0 0 0 0 2zM13 13h18a1 1 0 0 0 0-2H13a1 1 0 0 0 0 2zM41 16H13a1 1 0 0 0 0 2h28a1 1 0 0 0 0-2zM41 21H13a1 1 0 0 0 0 2h28a1 1 0 0 0 0-2zM42 27a1 1 0 0 0-1-1H13a1 1 0 0 0 0 2h28a1 1 0 0 0 1-1zM13 33h16a1 1 0 0 0 0-2H13a1 1 0 0 0 0 2zM39 37a1 1 0 0 0-1-1H13a1 1 0 0 0 0 2h25a1 1 0 0 0 1-1zM13 41a1 1 0 0 0 0 2h11a1 1 0 0 0 0-2zM32 46H13a1 1 0 0 0 0 2h19a1 1 0 0 0 0-2z"
+                                            style="fill:#28282b" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <p>Forms</p>
+                        </li>
+                        <li class="sidebar__tool-item">
+                            <div class="sidebar__icon-container">
+                                <svg viewBox="0 0 43.59 40.14">
+                                    <defs>
+                                        <style>
+                                            .cls-1 {
+                                                fill: none;
+                                                stroke: #000;
+                                                stroke-linecap: round;
+                                                stroke-linejoin: round;
+                                                stroke-width: 2px;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <g id="Layer_2" data-name="Layer 2">
+                                        <g id="Layer_2-2" data-name="Layer 2">
+                                            <path class="cls-1"
+                                                d="M21.46,1C9.83,1,1,8.74,1,18.28a12.83,12.83,0,0,0,5.41,11h0A15.59,15.59,0,0,1,6,37.4a1.35,1.35,0,0,0,1.74,1.66l10.59-3.75a23.26,23.26,0,0,0,3.26.25c11.63,0,21-7.74,21-17.28S33.09,1,21.46,1Z">
+                                            </path>
+                                            <path class="cls-1" d="M18.15,35.31a23.69,23.69,0,0,1-6.8-2.44"></path>
+                                            <circle cx="12.84" cy="18.87" r="2.37"></circle>
+                                            <circle cx="22.12" cy="18.87" r="2.37"></circle>
+                                            <circle cx="31.4" cy="18.87" r="2.37"></circle>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <p>Message</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidebar--bottom">
+                    <div class="sidebar__controls">
+                        <p class="sidebar__key">CallBacks</p>
+                        <p class="sidebar__value">NO</p>
+                    </div>
+                    <div class="sidebar__controls">
+                        <label class="sidebar__key" for="swith">Alt phone dial</label>
+                        <div class="switch-box">
+                            <input class="switch-box__checkbox" type="checkbox" id="switch" />
+                            <label class="switch-box__label" for="switch"></label>
+                        </div>
+                    </div>
+                    <div class="sidebar__help">
+                        <svg viewBox="0 0 24 24">
+                            <g data-name="27.Question">
+                                <path
+                                    d="M12 24a12 12 0 1 1 12-12 12.013 12.013 0 0 1-12 12zm0-22a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2z" />
+                                <path d="M13 16h-2v-4h1a3 3 0 1 0-3-3H7a5 5 0 1 1 6 4.9zM11 18h2v2h-2z" />
+                            </g>
+                        </svg>
+                        <p class="sidebar__key">Help</p>
+                    </div>
+                    <div class="sidebar__controls">
+                        <div class="sidebar__user">
+                            <div class="sidebar__avatar">
+                                <picture><source srcset="./img/avatar.webp" type="image/webp"><img src="./img/avatar.png" alt="User photo"></picture>
+                                <p class="sidebar__key">Arip S.</p>
+                            </div>
+                            <div class="sidebar__menu-icon" id="menuBtn">
+                                <svg width="24" height="24">
+                                    <path
+                                        d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
+                                </svg>
+                            </div>
+
+                            <!-- DROPDOWN MENU STARTS -->
+                            <div class="dropdown" id="menuDropdown">
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item">
+                                        <p>Calls in Queue</p>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <p>Agent Call Log</p>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <p>Call Channels</p>
+                                    </li>
+                                    <li class="dropdown__item dropdown__item--doubled">
+                                        <p>Notification</p>
+                                        <span class="dropdown__item-value">ON</span>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <p>Groups</p>
+                                    </li>
+                                    <li class="dropdown__item dropdown__item--doubled">
+                                        <p>Change Theme</p>
+                                        <span class="dropdown__item-value">Light</span>
+                                    </li>
+                                    <li class="dropdown__item text-red">
+                                        <p>Log out</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- DROPDOWN MENU ENDS -->
+                        </div>
+
+                    </div>
+                </div>
             </aside>
             <!-- SIDEBAR ENDS  -->
 
             <!-- CONTENT STARTS -->
             <div class="content">
 
-                    <!-- CALL CONTROLS STARTS  -->
-                    <section class="call-controls">
-                        Call Controls
-                    </section>
-                    <!-- CALL CONTROLS ENDS  -->
-
-                    <!-- WORKING AREA STARTS  -->
-
-                    <section class="working-area">
-                        <div class="working-area__item">ITEM 1</div>
-                        <div class="working-area__item">ITEM 2</div>
-                    </section>
-                    <!-- WORKING AREA STARTS  -->
-
-                    <!-- FOOTER STARTS -->
-                    <footer class="footer">
-                        <p class="footer__text">Copyright © 2023 Ytel, IncTM All Right Reserved.</p>
-                        <div class="footer__buttons">
-                            <button class="footer__button footer__record">
-                                <div class="footer__record--white centered">
-                                    <div class="footer__record--pink centered">
-                                        <div class="footer__record--red centered"></div>
+                <!-- CALL CONTROLS STARTS  -->
+                <section class="call-controls">
+                    <div class="call-controls--top">
+                        <div class="call-controls__buttons">
+                            <button class="call-control-btn active-btn" disabled>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 18a6 6 0 0 0 6-6V6A6 6 0 0 0 6 6v6a6 6 0 0 0 6 6zM8 6a4 4 0 0 1 8 0v6a4 4 0 0 1-8 0z" />
+                                    <path
+                                        d="M21 12a1 1 0 0 0-2 0 7 7 0 0 1-14 0 1 1 0 0 0-2 0 9 9 0 0 0 8 8.94V22h-1a1 1 0 0 0 0 2h4a1 1 0 0 0 0-2h-1v-1.06A9 9 0 0 0 21 12z" />
+                                </svg>
+                                <p>Active</p>
+                            </button>
+                            <button class="call-control-btn pause-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <g data-name="pause circle">
+                                        <path
+                                            d="M12 0a12 12 0 1 0 12 12A12 12 0 0 0 12 0zm0 22a10 10 0 1 1 10-10 10 10 0 0 1-10 10z" />
+                                        <path
+                                            d="M14 8v8a1 1 0 0 0 2 0V8a1 1 0 0 0-2 0zM8 8v8a1 1 0 0 0 2 0V8a1 1 0 0 0-2 0z" />
+                                    </g>
+                                </svg>
+                                <p>Pause</p>
+                            </button>
+                        </div>
+                        <div class="call-controls__data">
+                            <p class="call-controls__status" id="callStatus">Paused</p>
+                            <div class="call-controls__loading">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="call-controls__progress">
+                            <div class="progress-bar">
+                                <div class="progress-line">
+                                    <div class="progress-line__progress paused">
                                     </div>
                                 </div>
-                            </button>
-                            <button class="footer__button footer__call">
-                                <svg version="1.1" x="0" y="0" viewBox="0 0 32 32" >
-                                    <path d="M22.969 31.818c-3.438 0-7.908-2.857-13.918-8.868C2.361 16.26-.423 11.479.292 7.905c.779-3.897 5.188-6.875 5.375-7a1 1 0 0 1 1.262.125L14 8.101a.999.999 0 0 1 0 1.414l-3.177 3.177c.251.501 1.092 1.809 3.884 4.601s4.1 3.633 4.602 3.884L22.485 18a1.03 1.03 0 0 1 1.414 0l7.071 7.071a1 1 0 0 1 .125 1.262c-.125.188-3.104 4.596-7 5.375-.363.073-.738.11-1.126.11zM6.125 3.053c-1.139.9-3.412 2.944-3.872 5.244-.556 2.78 2.207 7.234 8.212 13.239 6.005 6.005 10.456 8.767 13.239 8.212 2.299-.46 4.344-2.733 5.243-3.872l-5.754-5.754-2.828 2.829c-.732.733-2.096.732-7.071-4.243-2.119-2.118-3.513-3.769-4.145-4.906-.537-.965-.569-1.694-.098-2.165l2.829-2.829-5.755-5.755z" style="fill:#ffffff"/><path class="st0" d="M29.964 16.002a1 1 0 0 1-.996-.93c-.452-6.41-5.627-11.587-12.038-12.039a1 1 0 1 1 .141-1.995c7.399.522 13.37 6.496 13.891 13.894A1 1 0 0 1 30.035 16l-.071.002z"/><path  d="M23.937 15.992a1 1 0 0 1-.991-.875 6.985 6.985 0 0 0-6.069-6.063.999.999 0 1 1 .248-1.984 8.983 8.983 0 0 1 7.806 7.797 1 1 0 0 1-.994 1.125z"/>
+                            </div>
+                        </div>
+                        <div class="call-controls__time-block">
+                            <p class="call-controls__time">00:00:12</p>
+                            <p class="call-controls__time-status">Time Paused</p>
+                        </div>
+
+
+                        <!-- <button class="call-controls__scale-btn" id="callControlsScaleBtn">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.145 137.145" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 137.145 137.145">
+                                    <g>
+                                      <g>
+                                        <path d="M109.715,0H27.429C12.28,0,0,12.281,0,27.428v82.287c0,15.148,12.28,27.429,27.429,27.429h82.286    c15.148,0,27.429-12.281,27.429-27.429V27.428C137.144,12.281,124.864,0,109.715,0z M123.43,102.858    c0,11.361-9.21,20.572-20.571,20.572H61.715V61.715h61.715V102.858z M123.43,48H13.715v13.715h34.286v61.715H34.286    c-11.362,0-20.572-9.211-20.572-20.572V61.715h0V48h0V34.286c0-11.361,9.21-20.572,20.572-20.572h68.572    c11.361,0,20.571,9.211,20.571,20.572V48z"></path>
+                                      </g>
+                                    </g>
+                                  </svg>
+                            </button> -->
+                    </div>
+
+                    <div class="call-controls--bottom"></div>
+                </section>
+                <!-- CALL CONTROLS ENDS  -->
+
+                <!-- WORKING AREA STARTS  -->
+
+                <section class="working-area">
+
+                    <!-- CUSTOMER INFO STARTS  -->
+                    <div class="working-area__item">
+                        <div class="working-area__data">
+                            <h3 class="working-area__title">Customer Info</h3>
+                            <div class="working-area__icons">
+                                <button class="working-area__icon" id="minimaizeCustomer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="minus">
+                                        <g data-name="Layer 2">
+                                            <g data-name="minus-square">
+                                                <path
+                                                    d="M18 3H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3zm1 15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1z">
+                                                </path>
+                                                <path d="M15 11H9a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2z"></path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                                <button class="working-area__icon" id="expendCustomer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        id="expand">
+                                        <path fill="#7A7A7A"
+                                            d="M5.3 6.7l1.4-1.4-3-3L5 1H1v4l1.3-1.3zM6.7 10.7L5.3 9.3l-3 3L1 11v4h4l-1.3-1.3zM10.7 9.3l-1.4 1.4 3 3L11 15h4v-4l-1.3 1.3zM11 1l1.3 1.3-3 3 1.4 1.4 3-3L15 5V1z">
+                                        </path>
+                                    </svg>
+                                </button>
+                                <button class="working-area__icon" id="trayCustomer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 32 32"
+                                        id="down-arrow">
+                                        <path
+                                            d="M16 22a2 2 0 0 1-1.41-.59l-10-10a2 2 0 0 1 2.82-2.82L16 17.17l8.59-8.58a2 2 0 0 1 2.82 2.82l-10 10A2 2 0 0 1 16 22Z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <form class="customer-form">
+                            <div class="customer-form__row">
+                                <div class="input-field">
+                                    <label for="title">Title</label>
+                                    <input type="text" placeholder="Input title" id="title">
+                                </div>
+                                <div class="input-field">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" placeholder="Input full name" id="name">
+                                </div>
+                            </div>
+                            <div class="customer-form__row">
+                                <div class="input-field">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" placeholder="Input phone number" id="phone">
+                                </div>
+                                <div class="input-field">
+                                    <label for="altPhone">Alt. Phone Number</label>
+                                    <input type="tel" placeholder="Input alt. phone number" id="altPhone">
+                                </div>
+                            </div>
+                            <div class="customer-form__row">
+                                <div class="input-field">
+                                    <label for="email">Email</label>
+                                    <input type="email" placeholder="Input email" id="email">
+                                </div>
+                                <div class="input-field">
+                                    <label for="security">Security Phrase</label>
+                                    <input type="text" placeholder="Input security phrase" id="security">
+                                </div>
+                            </div>
+                            <div class="input-field">
+                                <label for="address1">Address Line 1</label>
+                                <input type="text" placeholder="Input address line 1" id="address1">
+                            </div>
+                            <div class="input-field">
+                                <label for="address2">Address Line 2</label>
+                                <input type="text" placeholder="Input address line 2" id="address2">
+                            </div>
+                            <div class="customer-form__row">
+                                <div class="input-field">
+                                    <label for="city">City</label>
+                                    <select class="form-select" type="text" id="city">
+                                        <option value="0">Choose city</option>
+                                        <option value="1">City 1</option>
+                                        <option value="2">City 2</option>
+                                        <option value="3">City 3</option>
+                                    </select>
+                                </div>
+                                <div class="input-field">
+                                    <label for="state">State</label>
+                                    <select class="form-select" type="text" id="state">
+                                        <option value="0">Choose state</option>
+                                        <option value="1">State 1</option>
+                                        <option value="2">State 2</option>
+                                        <option value="3">State 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="customer-form__row">
+                                <div class="input-field">
+                                    <label for="province">Province</label>
+                                    <select class="form-select" type="text" id="province">
+                                        <option value="0">Choose province</option>
+                                        <option value="1">Province 1</option>
+                                        <option value="2">Province 2</option>
+                                        <option value="3">Province 3</option>
+                                    </select>
+                                </div>
+                                <div class="input-field">
+                                    <label for="postCode">Post Code</label>
+                                    <input type="number" placeholder="Input post code" id="postCode">
+                                </div>
+                            </div>
+                            <div class="input-field">
+                                <label for="comment">Comment</label>
+                                <textarea type="text" placeholder="Write comment here..." id="comment"
+                                    rows="5"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- CUSTOMER INFO ENDS  -->
+
+                    <!-- SCRIPTS SECTION STARTS  -->
+                    <div class="working-area__item">
+                        <div class="working-area__data">
+                            <h3 class="working-area__title">Scripts</h3>
+                            <div class="working-area__icons">
+                                <button class="working-area__icon" id="minimaizeCustomer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="minus">
+                                        <g data-name="Layer 2">
+                                            <g data-name="minus-square">
+                                                <path
+                                                    d="M18 3H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3zm1 15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1z">
+                                                </path>
+                                                <path d="M15 11H9a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2z"></path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                                <button class="working-area__icon" id="expendCustomer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        id="expand">
+                                        <path fill="#7A7A7A"
+                                            d="M5.3 6.7l1.4-1.4-3-3L5 1H1v4l1.3-1.3zM6.7 10.7L5.3 9.3l-3 3L1 11v4h4l-1.3-1.3zM10.7 9.3l-1.4 1.4 3 3L11 15h4v-4l-1.3 1.3zM11 1l1.3 1.3-3 3 1.4 1.4 3-3L15 5V1z">
+                                        </path>
+                                    </svg>
+                                </button>
+                                <button class="working-area__icon" id="trayCustomer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 32 32"
+                                        id="down-arrow">
+                                        <path
+                                            d="M16 22a2 2 0 0 1-1.41-.59l-10-10a2 2 0 0 1 2.82-2.82L16 17.17l8.59-8.58a2 2 0 0 1 2.82 2.82l-10 10A2 2 0 0 1 16 22Z">
+                                        </path>
+                                    </svg>
+                                </button>
+                                <button class="working-area__icon" id="closeCustomer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-x">
+                                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="scripts__content">
+                            <textarea name="scripts"></textarea>
+                            <button class="scripts__refresh">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="refresh">
+                                    <path d="M20,9H15a1,1,0,0,1,0-2h4V3a1,1,0,0,1,2,0V8A1,1,0,0,1,20,9Z"></path>
+                                    <path
+                                        d="M12,22A10,10,0,1,1,20.89,7.42a1,1,0,0,1-1.78.92A8,8,0,1,0,20,12a1,1,0,0,1,2,0A10,10,0,0,1,12,22Z">
+                                    </path>
                                 </svg>
                             </button>
                         </div>
-                    </footer>
-                    <!-- FOOTER ENDS -->
-                </div>
+                    </div>
+                    <!-- SCRIPTS SECTION ENDS  -->
+                </section>
+                <!-- WORKING AREA STARTS  -->
 
+                <!-- FOOTER STARTS -->
+                <footer class="footer">
+                    <p class="footer__text">Copyright © 2023 Ytel, IncTM All Right Reserved.</p>
+                    <div class="footer__buttons">
+                        <button class="footer__button footer__record">
+                            <div class="footer__record--white centered">
+                                <div class="footer__record--pink centered">
+                                    <div class="footer__record--red centered"></div>
+                                </div>
+                            </div>
+                        </button>
+                        <button class="footer__button footer__call">
+                            <svg version="1.1" x="0" y="0" viewBox="0 0 32 32">
+                                <path
+                                    d="M22.969 31.818c-3.438 0-7.908-2.857-13.918-8.868C2.361 16.26-.423 11.479.292 7.905c.779-3.897 5.188-6.875 5.375-7a1 1 0 0 1 1.262.125L14 8.101a.999.999 0 0 1 0 1.414l-3.177 3.177c.251.501 1.092 1.809 3.884 4.601s4.1 3.633 4.602 3.884L22.485 18a1.03 1.03 0 0 1 1.414 0l7.071 7.071a1 1 0 0 1 .125 1.262c-.125.188-3.104 4.596-7 5.375-.363.073-.738.11-1.126.11zM6.125 3.053c-1.139.9-3.412 2.944-3.872 5.244-.556 2.78 2.207 7.234 8.212 13.239 6.005 6.005 10.456 8.767 13.239 8.212 2.299-.46 4.344-2.733 5.243-3.872l-5.754-5.754-2.828 2.829c-.732.733-2.096.732-7.071-4.243-2.119-2.118-3.513-3.769-4.145-4.906-.537-.965-.569-1.694-.098-2.165l2.829-2.829-5.755-5.755z"
+                                    style="fill:#ffffff" />
+                                <path class="st0"
+                                    d="M29.964 16.002a1 1 0 0 1-.996-.93c-.452-6.41-5.627-11.587-12.038-12.039a1 1 0 1 1 .141-1.995c7.399.522 13.37 6.496 13.891 13.894A1 1 0 0 1 30.035 16l-.071.002z" />
+                                <path
+                                    d="M23.937 15.992a1 1 0 0 1-.991-.875 6.985 6.985 0 0 0-6.069-6.063.999.999 0 1 1 .248-1.984 8.983 8.983 0 0 1 7.806 7.797 1 1 0 0 1-.994 1.125z" />
+                            </svg>
+                        </button>
+                    </div>
+                </footer>
+                <!-- FOOTER ENDS -->
             </div>
-            <!-- CONTENT ENDS -->
+
         </div>
+        <!-- CONTENT ENDS -->
+        </div>
+
+
+        <!-- MODALS STARTS  -->
+        <div class="backdrop"></div>
+        <!-- MANUAL DIAL MODAL STARTS  -->
+        <div class="modal-window" id="manualDial">
+            <div class="modal-window__heading">
+                <h3 class="modal-window__title">Manual Dial</h3>
+                <button id="mdialCloseBbtn">
+                    <svg  viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                </button>
+            </div>
+            <div class="modal-window__content">
+                <div class="modal-window__dial">
+                    <div class="customer-form__row modal-window__inputs">
+                        <div class=" code-field">
+                            <select class="form-select modal-window__input" id="code">
+                                <option value="0">+1</option>
+                                <option value="1">+2</option>
+                                <option value="2">+3</option>
+                                <option value="3">+4</option>
+                            </select>
+                        </div>
+                            <input class="modal-window__input" type="text" placeholder="eg. 18391913" id="call-number">
+                    </div>
+                    <div class="modal-window__keyboard">
+                        <div class="modal-window__key-row">
+                            <div class="number" id="number1">1</div>
+                            <div class="number" id="number2">2</div>
+                            <div class="number" id="number3">3</div>
+                        </div>
+                        <div class="modal-window__key-row">
+                            <div class="number" id="number4">4</div>
+                            <div class="number" id="number5">5</div>
+                            <div class="number" id="number6">6</div>
+                        </div>
+                        <div class="modal-window__key-row">
+                            <div class="number" id="number7">7</div>
+                            <div class="number" id="number8">8</div>
+                            <div class="number" id="number9">9</div>
+                        </div>
+                        <div class="modal-window__key-row">
+                            <div class="number" id="number1">*</div>
+                            <div class="number" id="number2">0</div>
+                            <div class="number" id="number3">#</div>
+                        </div>
+                        <div class="centered">
+                            <button class="modal-window__call-btn" id="callBtn">
+                                <svg x="0" y="0" version="1.1" viewBox="0 0 29 29" xml:space="preserve">
+                                    <path
+                                        d="m20.914 17.743-2.091 1.178a1.319 1.319 0 0 1-1.58-.217l-6.979-6.979a1.32 1.32 0 0 1-.217-1.58l1.178-2.091a1.978 1.978 0 0 0-.325-2.37L7.766 2.55a1.978 1.978 0 0 0-2.798 0L3.545 3.972a5.276 5.276 0 0 0-.793 6.446l.714 1.19a41.36 41.36 0 0 0 14.946 14.631l.141.081c2.102 1.201 4.699.851 6.382-.831l1.486-1.486a1.978 1.978 0 0 0 0-2.798l-3.136-3.136a1.978 1.978 0 0 0-2.371-.326z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-window__logs">
+                    <div class="modal-window__log-heading">
+                        <h4>Call Log</h4>
+                        <p><span class="plus">+</span>Complete All Log</p>
+                    </div>
+                    <div class="modal-window__log-list">
+                        <div class="modal-window__log">
+                            <div class="modal-window__log-info">
+                                <div class="modal-window__log-avatar pink">JD</div>
+                                <div class="modal-window__log-details">
+                                    <h6>Jakob Dorwart</h6>
+                                    <p>+13113-18391</p>
+                                </div>
+                            </div>
+                            <p class="modal-window__log-time">30m ago</p>
+                        </div>
+                        <div class="modal-window__log">
+                            <div class="modal-window__log-info">
+                                <div class="modal-window__log-avatar green">EW</div>
+                                <div class="modal-window__log-details">
+                                    <h6>Emerson Westervelt</h6>
+                                    <p>+13113-18391</p>
+                                </div>
+                            </div>
+                            <p class="modal-window__log-time">30m ago</p>
+                        </div>
+                        <div class="modal-window__log">
+                            <div class="modal-window__log-info">
+                                <div class="modal-window__log-avatar grey">TP</div>
+                                <div class="modal-window__log-details">
+                                    <h6>Tiana Press</h6>
+                                    <p>+13113-18391</p>
+                                </div>
+                            </div>
+                            <p class="modal-window__log-time">30m ago</p>
+                        </div>
+                        <div class="modal-window__log">
+                            <div class="modal-window__log-info">
+                                <div class="modal-window__log-avatar green">AD</div>
+                                <div class="modal-window__log-details">
+                                    <h6>Adnan Daryl</h6>
+                                    <p>+13113-18391</p>
+                                </div>
+                            </div>
+                            <p class="modal-window__log-time">30m ago</p>
+                        </div>
+                    </div>
+
+                    <p class="modal-window__log-btn">Quick Dial</p>
+                    <p class="modal-window__log-btn">Last Number Connected</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- MANUAL DIAL MODAL ENDS  -->
+        <!-- MODALS ENDS  -->
     </main>
 
 
+
+
     <!-- BOOTSTRAP JS  -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js?_v=20240106130840"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js?_v=20240107033917"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
 
     <!-- CUSTOM SCRIPTS -->
-    <script defer src="js/app.min.js?_v=20240106130840"></script>
+    <script defer src="js/app.min.js?_v=20240107033917"></script>
 </body>
 
 </html>
