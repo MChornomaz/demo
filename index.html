@@ -7,18 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicons  -->
-    <link rel="icon" href="./img/logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&amp;display=swap&_v=20240112133034" rel="stylesheet">
+    <link rel="icon" href="assets/img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&amp;display=swap&_v=20240115134754" rel="stylesheet">
 
 
     <!-- CSS  -->
     
     <!-- BOOTSTRAP CSS  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css?_v=20240112133034" rel="stylesheet"
+    <link href="assets/files/libs/bootstrap/bootstrap.min.css?_v=20240115134754" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <!-- CUSTOM STYLES -->
-    <link rel="stylesheet" href="css/style.min.css?_v=20240112133034">
+    <link rel="stylesheet" href="assets/css/style.min.css?_v=20240115134754">
     <title>Ytel | Main</title>
 </head>
 
@@ -34,8 +34,8 @@
             <!-- SIDEBAR STARTS  -->
             <aside class="sidebar" id="leftSidebar">
                 <div class="sidebar--top">
-                    <div class="sidebar__logo">
-                        <picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt="Ytel logo"></picture>
+                    <div class="sidebar__logo" id="logo">
+                        <picture><source srcset="assets/img/logo.webp" type="image/webp"><img src="assets/img/logo.png" alt="Ytel logo"></picture>
                     </div>
                     <div class="sidebar__select">
                         <h5 class="sidebar__title">Select Campaign</h5>
@@ -83,13 +83,13 @@
                             </div>
                             <p>Scripts</p>
                         </li>
-                        <li class="sidebar__tool-item">
+                        <li class="sidebar__tool-item" id="formsBtn">
                             <div class="sidebar__icon-container">
                                 <div id="sidebar-forms-icon"></div>
                             </div>
                             <p>Forms</p>
                         </li>
-                        <li class="sidebar__tool-item">
+                        <li class="sidebar__tool-item" id="messageBtn">
                             <div class="sidebar__icon-container">
                                 <div id="sidebar-message-icon"></div>
                             </div>
@@ -105,7 +105,7 @@
                     <div class="sidebar__controls">
                         <label class="sidebar__key" for="switch">Alt phone dial</label>
                         <div class="switch-box">
-                            <input class="switch-box__checkbox" type="checkbox" id="switch" />
+                            <input class="switch-box__checkbox" type="checkbox" id="switch" >
                             <label class="switch-box__label" for="switch"></label>
                         </div>
                     </div>
@@ -122,7 +122,7 @@
                     <div class="sidebar__controls">
                         <div class="sidebar__user" id="menuBtn">
                             <div class="sidebar__avatar">
-                                <picture><source srcset="./img/avatar.webp" type="image/webp"><img src="./img/avatar.png" alt="User photo"></picture>
+                                <picture><source srcset="assets/img/avatar.webp" type="image/webp"><img src="assets/img/avatar.png" alt="User photo"></picture>
                                 <p class="sidebar__key">Arip S.</p>
                             </div>
                             <div class="sidebar__menu-icon" >
@@ -135,21 +135,25 @@
                             <!-- DROPDOWN MENU STARTS -->
                             <div class="dropdown" id="menuDropdown">
                                 <ul class="dropdown__list">
-                                    <li class="dropdown__item">
+                                    <li class="dropdown__item" id="callsInQueueBtn">
                                         <p>Calls in Queue</p>
                                     </li>
-                                    <li class="dropdown__item">
+                                    <li class="dropdown__item" id="agentCallLogBtn">
                                         <p>Agent Call Log</p>
                                     </li>
-                                    <li class="dropdown__item">
+                                    <li class="dropdown__item" id="callChannelsBtn">
                                         <p>Call Channels</p>
                                     </li>
                                     <li class="dropdown__item dropdown__item--doubled">
                                         <p>Notification</p>
                                         <span class="dropdown__item-value">ON</span>
                                     </li>
-                                    <li class="dropdown__item">
+                                    <li class="dropdown__item" id="groupSelectionBtn">
                                         <p>Groups</p>
+                                    </li>
+                                    <li class="dropdown__item dropdown__item--doubled" id="toggleSidebarLeftBtn">
+                                        <p>Toggle sidebar</p>
+                                        <span id="toggleSidebarLeft" class="dropdown__item-value">Left</span>
                                     </li>
                                     <li class="dropdown__item dropdown__item--doubled" id="themeBtn">
                                         <p>Change Theme</p>
@@ -174,30 +178,30 @@
             <aside class="vertical-sidebar" id="verticalSidebar">
                 <div class="vertical-sidebar--left">
                     <div class="vertical-sidebar__logo">
-                        <picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt="Ytel logo"></picture>
+                        <picture><source srcset="assets/img/logo.webp" type="image/webp"><img src="assets/img/logo.png" alt="Ytel logo"></picture>
                     </div>
 
                     <ul class="vertical-sidebar__tools-list">
-                        <li class="vertical-sidebar__tool-item" id="mDialBtnVertical">
+                        <li class="vertical-sidebar__tool-item" id="mDialBtnHorizontalSidebar">
                             <div class="vertical-sidebar__icon-container">
                                 <div id="sidebar2-dial-pad-icon"></div> 
                                     
                             </div>
                             <p>M Dial</p>
                         </li>
-                        <li class="vertical-sidebar__tool-item">
+                        <li class="vertical-sidebar__tool-item" id="scriptBtn1">
                             <div class="vertical-sidebar__icon-container">
                                 <div id="sidebar2-file-icon"></div>
                             </div>
                             <p>Scripts</p>
                         </li>
-                        <li class="vertical-sidebar__tool-item">
+                        <li class="vertical-sidebar__tool-item" id="formsBtn1">
                             <div class="vertical-sidebar__icon-container">
                                 <div id="sidebar2-forms-icon"></div>
                             </div>
                             <p>Forms</p>
                         </li>
-                        <li class="vertical-sidebar__tool-item">
+                        <li class="vertical-sidebar__tool-item" id="messageBtn1">
                             <div class="vertical-sidebar__icon-container">
                                 <div id="sidebar2-message-icon"></div>
                             </div>
@@ -209,7 +213,7 @@
                     <div class="vertical-sidebar__controls">
                         <label class="vertical-sidebar__key" for="switchVerticalSidebar">Alt phone dial</label>
                         <div class="switch-box">
-                            <input class="switch-box__checkbox" type="checkbox" id="switchVerticalSidebar" />
+                            <input class="switch-box__checkbox" type="checkbox" id="switchVerticalSidebar" >
                             <label class="switch-box__label" for="switchVerticalSidebar"></label>
                         </div>
                     </div>
@@ -225,7 +229,7 @@
                     <div class="vertical-sidebar__controls">
                         <div class="vertical-sidebar__user" id="verticalMenuBtn">
                             <div class="vertical-sidebar__avatar">
-                                <picture><source srcset="./img/avatar.webp" type="image/webp"><img src="./img/avatar.png" alt="User photo"></picture>
+                                <picture><source srcset="assets/img/avatar.webp" type="image/webp"><img src="assets/img/avatar.png" alt="User photo"></picture>
                                 <p class="vertical-sidebar__key">Arip S.</p>
                             </div>
                             <div class="vertical-sidebar__menu-icon" >
@@ -238,21 +242,25 @@
                             <!-- DROPDOWN MENU STARTS -->
                             <div class="dropdown vertical" id="menuDropdownVertical">
                                 <ul class="dropdown__list">
-                                    <li class="dropdown__item">
+                                    <li class="dropdown__item" id="callsInQueueBtn1">
                                         <p>Calls in Queue</p>
                                     </li>
-                                    <li class="dropdown__item">
+                                    <li class="dropdown__item" id="agentCallLogBtn1">
                                         <p>Agent Call Log</p>
                                     </li>
-                                    <li class="dropdown__item">
+                                    <li class="dropdown__item" id="callChannelsBtn1">
                                         <p>Call Channels</p>
                                     </li>
                                     <li class="dropdown__item dropdown__item--doubled">
                                         <p>Notification</p>
                                         <span class="dropdown__item-value">ON</span>
                                     </li>
-                                    <li class="dropdown__item">
+                                    <li class="dropdown__item" id="groupSelectionBtn1">
                                         <p>Groups</p>
+                                    </li>
+                                    <li class="dropdown__item dropdown__item--doubled" id="toggleSidebarTopBtn">
+                                        <p>Toggle sidebar</p>
+                                        <span id="toggleSidebarTop" class="dropdown__item-value">Top</span>
                                     </li>
                                     <li class="dropdown__item dropdown__item--doubled" id="themeBtn2">
                                         <p>Change Theme</p>
@@ -303,7 +311,7 @@
                                 </button>
                             </div>
                             <div class="call-controls__data">
-                                <p class="call-controls__status" id="callStatus">Paused</p>
+                                <p class="call-controls__status" id="callStatus1">Paused</p>
                                 <div class="call-controls__loading">
                                     <span></span>
                                     <span></span>
@@ -424,7 +432,7 @@
                                             <p class="select__text">Transfer</p>
                                             <div class="select__icon">
                                                 <svg width="24" height="24" viewBox="0 0 24 24"
-                                                    id="keyboard-down-arrow">
+                                                    id="keyboard-down-arrow1">
                                                     <path
                                                         d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z">
                                                     </path>
@@ -485,7 +493,7 @@
                                 </div>
                                 <button class="transparent-blue-btn dial-btn">Dial Next Number</button>
                                 <div class="call-controls__data">
-                                    <p class="call-controls__status paused" id="callStatus">Recording file</p>
+                                    <p class="call-controls__status paused" id="callStatus3">Recording file</p>
                                     <p class="call-controls__file-name">1931-recordfile.mp3</p>
                                 </div>
                             </div>
@@ -545,7 +553,7 @@
                                             <p class="select__text">Transfer</p>
                                             <div class="select__icon">
                                                 <svg width="24" height="24" viewBox="0 0 24 24"
-                                                    id="keyboard-down-arrow">
+                                                    id="keyboard-down-arrow2">
                                                     <path
                                                         d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z">
                                                     </path>
@@ -590,7 +598,7 @@
                                 <h3 class="working-area__title">Customer Info</h3>
                                 <div class="working-area__icons">
                                     <button class="working-area__icon" id="unlockCustomer">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="minus">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="minus1">
                                             <g data-name="Layer 2">
                                                 <g data-name="minus-square">
                                                     <path
@@ -630,7 +638,7 @@
                                 <div class="customer-form__row">
                                     <div class="input-field">
                                         <label for="phone">Phone Number</label>
-                                        <input type="tel" placeholder="Input phone number" id="phone">
+                                        <input type="tel" placeholder="Input phone number" id="phone1">
                                     </div>
                                     <div class="input-field">
                                         <label for="altPhone">Alt. Phone Number</label>
@@ -663,7 +671,7 @@
                                                 <p class="select__text">Choose city</p>
                                                 <div class="select__icon">
                                                     <svg width="24" height="24" viewBox="0 0 24 24"
-                                                        id="keyboard-down-arrow">
+                                                        id="keyboard-down-arrow3">
                                                         <path
                                                             d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z">
                                                         </path>
@@ -694,7 +702,7 @@
                                                 <p class="select__text">Choose state</p>
                                                 <div class="select__icon">
                                                     <svg width="24" height="24" viewBox="0 0 24 24"
-                                                        id="keyboard-down-arrow">
+                                                        id="keyboard-down-arrow4">
                                                         <path
                                                             d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z">
                                                         </path>
@@ -726,7 +734,7 @@
                                                 <p class="select__text">Choose province</p>
                                                 <div class="select__icon">
                                                     <svg width="24" height="24" viewBox="0 0 24 24"
-                                                        id="keyboard-down-arrow">
+                                                        id="keyboard-down-arrow5">
                                                         <path
                                                             d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z">
                                                         </path>
@@ -756,7 +764,7 @@
                                 </div>
                                 <div class="input-field">
                                     <label for="comment">Comment</label>
-                                    <textarea type="text" placeholder="Write comment here..." id="comment"
+                                    <textarea placeholder="Write comment here..." id="comment"
                                         rows="5"></textarea>
                                 </div>
 
@@ -790,7 +798,7 @@
                                     </button>
                                     <button class="working-area__icon" id="minimizeScripts">
                                         <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 32 32"
-                                            id="down-arrow">
+                                            id="down-arrow1">
                                             <path
                                                 d="M16 22a2 2 0 0 1-1.41-.59l-10-10a2 2 0 0 1 2.82-2.82L16 17.17l8.59-8.58a2 2 0 0 1 2.82 2.82l-10 10A2 2 0 0 1 16 22Z">
                                             </path>
@@ -849,6 +857,7 @@
                                     d="M23.937 15.992a1 1 0 0 1-.991-.875 6.985 6.985 0 0 0-6.069-6.063.999.999 0 1 1 .248-1.984 8.983 8.983 0 0 1 7.806 7.797 1 1 0 0 1-.994 1.125z" />
                             </svg>
                         </button>
+                        <button class="footer__button footer__reset" id="reset">Reset</button>
                     </div>
                 </footer>
                 <!-- FOOTER ENDS -->
@@ -860,10 +869,10 @@
                     <p class="tray__name">Calls in Queue</p>
                     <div class="tray__icons">
                         <button class="tray__icon" id="calsInQueueExpectBtn">
-                            <picture><source srcset="./img/icons/expect.webp" type="image/webp"><img src="./img/icons/expect.png" alt="expect icon"></picture>
+                            <picture><source srcset="assets/img/icons/expect.webp" type="image/webp"><img src="assets/img/icons/expect.png" alt="expect icon"></picture>
                         </button>
                         <button class="tray__icon">
-                            <picture><source srcset="./img/icons/link.webp" type="image/webp"><img src="./img/icons/link.png" alt="link icon"></picture>
+                            <picture><source srcset="assets/img/icons/link.webp" type="image/webp"><img src="assets/img/icons/link.png" alt="link icon"></picture>
                         </button>
                     </div>
                 </div>
@@ -871,10 +880,10 @@
                     <p class="tray__name">Customer Info</p>
                     <div class="tray__icons">
                         <button class="tray__icon" id="customerInfoExpectBtn">
-                            <picture><source srcset="./img/icons/expect.webp" type="image/webp"><img src="./img/icons/expect.png" alt="expect icon"></picture>
+                            <picture><source srcset="assets/img/icons/expect.webp" type="image/webp"><img src="assets/img/icons/expect.png" alt="expect icon"></picture>
                         </button>
                         <button class="tray__icon">
-                            <picture><source srcset="./img/icons/link.webp" type="image/webp"><img src="./img/icons/link.png" alt="link icon"></picture>
+                            <picture><source srcset="assets/img/icons/link.webp" type="image/webp"><img src="assets/img/icons/link.png" alt="link icon"></picture>
                         </button>
                     </div>
                 </div>
@@ -882,17 +891,17 @@
                     <p class="tray__name">Scripts</p>
                     <div class="tray__icons">
                         <button class="tray__icon" id="scriptsExpectBtn">
-                            <picture><source srcset="./img/icons/expect.webp" type="image/webp"><img src="./img/icons/expect.png" alt="expect icon"></picture>
+                            <picture><source srcset="assets/img/icons/expect.webp" type="image/webp"><img src="assets/img/icons/expect.png" alt="expect icon"></picture>
                         </button>
                         <button class="tray__icon">
-                            <picture><source srcset="./img/icons/link.webp" type="image/webp"><img src="./img/icons/link.png" alt="link icon"></picture>
+                            <picture><source srcset="assets/img/icons/link.webp" type="image/webp"><img src="assets/img/icons/link.png" alt="link icon"></picture>
                         </button>
                     </div>
                 </div>
             </div>
             <!-- TRAY SECTION ENDS  -->
 
-        </div>
+        
         <!-- CONTENT ENDS -->
         </div>
 
@@ -925,7 +934,7 @@
                                 <button class="select__btn">
                                     <p class="select__text">+1</p>
                                     <div class="select__icon">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow6">
                                             <path
                                                 d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z">
                                             </path>
@@ -967,9 +976,9 @@
                             <div class="number" id="number9">9</div>
                         </div>
                         <div class="modal-window__key-row">
-                            <div class="number" id="number1">*</div>
-                            <div class="number" id="number2">0</div>
-                            <div class="number" id="number3">#</div>
+                            <div class="number" id="numberStar">*</div>
+                            <div class="number" id="number0">0</div>
+                            <div class="number" id="numberHash">#</div>
                         </div>
                         <div class="centered">
                             <button class="modal-window__call-btn" id="callBtn">
@@ -1067,7 +1076,7 @@
                                 </g>
                             </g>
                         </svg>
-                        <svg viewBox="0 0 24 24" id="star">
+                        <svg viewBox="0 0 24 24" id="star1">
                             <g data-name="Layer 2">
                                 <g data-name="star">
                                     <rect width="24" height="24" opacity="0" transform="rotate(90 12 12)"></rect>
@@ -1077,7 +1086,7 @@
                                 </g>
                             </g>
                         </svg>
-                        <svg viewBox="0 0 24 24" id="star">
+                        <svg viewBox="0 0 24 24" id="star2">
                             <g data-name="Layer 2">
                                 <g data-name="star">
                                     <rect width="24" height="24" opacity="0" transform="rotate(90 12 12)"></rect>
@@ -1087,7 +1096,7 @@
                                 </g>
                             </g>
                         </svg>
-                        <svg viewBox="0 0 24 24" id="star">
+                        <svg viewBox="0 0 24 24" id="star3">
                             <g data-name="Layer 2">
                                 <g data-name="star">
                                     <rect width="24" height="24" opacity="0" transform="rotate(90 12 12)"></rect>
@@ -1097,7 +1106,7 @@
                                 </g>
                             </g>
                         </svg>
-                        <svg viewBox="0 0 24 24" id="star">
+                        <svg viewBox="0 0 24 24" id="star4">
                             <g data-name="Layer 2">
                                 <g data-name="star">
                                     <rect width="24" height="24" opacity="0" transform="rotate(90 12 12)"></rect>
@@ -1178,7 +1187,7 @@
                     <div class="result-section__wide-row">
                         <p>Pause Dialing</p>
                         <div class="switch-box">
-                            <input class="switch-box__checkbox" type="checkbox" id="pause-dialing" />
+                            <input class="switch-box__checkbox" type="checkbox" id="pause-dialing" >
                             <label class="switch-box__label" for="pause-dialing"></label>
                         </div>
                     </div>
@@ -1343,7 +1352,7 @@
                     <div class="group-modal__switch">
                         <p>Pause Dialing</p>
                         <div class="switch-box">
-                            <input class="switch-box__checkbox" type="checkbox" id="group-pause-dialing" checked />
+                            <input class="switch-box__checkbox" type="checkbox" id="group-pause-dialing" checked >
                             <label class="switch-box__label" for="group-pause-dialing"></label>
                         </div>
                     </div>
@@ -1373,7 +1382,7 @@
                             <button class="select__btn">
                                 <p class="select__text">AgentDirect - Single Agent Directory</p>
                                 <div class="select__icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow7">
                                         <path
                                             d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z">
                                         </path>
@@ -1415,7 +1424,7 @@
                     <div class="modal-left__row">
                         <p>Internal Transfer</p>
                         <div class="switch-box">
-                            <input class="switch-box__checkbox" type="checkbox" id="internal-transfer" checked />
+                            <input class="switch-box__checkbox" type="checkbox" id="internal-transfer" checked >
                             <label class="switch-box__label" for="internal-transfer"></label>
                         </div>
                     </div>
@@ -1425,7 +1434,7 @@
                             <button class="select__btn">
                                 <p class="select__text">Select Time</p>
                                 <div class="select__icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow8">
                                         <path
                                             d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z">
                                         </path>
@@ -1522,7 +1531,7 @@
                         <button class="select__btn">
                             <p class="select__text">Today</p>
                             <div class="select__icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow">
+                                <svg width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow9">
                                     <path
                                         d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z">
                                     </path>
@@ -1548,7 +1557,7 @@
                         <button class="select__btn">
                             <p class="select__text">Newest</p>
                             <div class="select__icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow">
+                                <svg width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow10">
                                     <path
                                         d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z">
                                     </path>
@@ -1614,10 +1623,10 @@
                                 <td>Agent</td>
                                 <td class="call-modal__icons">
                                     <div class="call-modal__image-container">
-                                        <picture><source srcset="./img/icons/information-circle.webp" type="image/webp"><img src="./img/icons/information-circle.png" alt="help btn"></picture>
+                                        <picture><source srcset="assets/img/icons/information-circle.webp" type="image/webp"><img src="assets/img/icons/information-circle.png" alt="help btn"></picture>
                                     </div>
                                     <div class="call-modal__image-container">
-                                        <picture><source srcset="./img/icons/phone-outgoing-02.webp" type="image/webp"><img src="./img/icons/phone-outgoing-02.png" alt="help btn"></picture>
+                                        <picture><source srcset="assets/img/icons/phone-outgoing-02.webp" type="image/webp"><img src="assets/img/icons/phone-outgoing-02.png" alt="help btn"></picture>
                                     </div>
 
                                 </td>
@@ -1638,10 +1647,10 @@
                                 <td>Agent</td>
                                 <td class="call-modal__icons">
                                     <div class="call-modal__image-container">
-                                        <picture><source srcset="./img/icons/information-circle.webp" type="image/webp"><img src="./img/icons/information-circle.png" alt="help btn"></picture>
+                                        <picture><source srcset="assets/img/icons/information-circle.webp" type="image/webp"><img src="assets/img/icons/information-circle.png" alt="help btn"></picture>
                                     </div>
                                     <div class="call-modal__image-container">
-                                        <picture><source srcset="./img/icons/phone-outgoing-02.webp" type="image/webp"><img src="./img/icons/phone-outgoing-02.png" alt="help btn"></picture>
+                                        <picture><source srcset="assets/img/icons/phone-outgoing-02.webp" type="image/webp"><img src="assets/img/icons/phone-outgoing-02.png" alt="help btn"></picture>
                                     </div>
                                 </td>
                             </tr>
@@ -1661,10 +1670,10 @@
                                 <td>Agent</td>
                                 <td class="call-modal__icons">
                                     <div class="call-modal__image-container">
-                                        <picture><source srcset="./img/icons/information-circle.webp" type="image/webp"><img src="./img/icons/information-circle.png" alt="help btn"></picture>
+                                        <picture><source srcset="assets/img/icons/information-circle.webp" type="image/webp"><img src="assets/img/icons/information-circle.png" alt="help btn"></picture>
                                     </div>
                                     <div class="call-modal__image-container">
-                                        <picture><source srcset="./img/icons/phone-outgoing-02.webp" type="image/webp"><img src="./img/icons/phone-outgoing-02.png" alt="help btn"></picture>
+                                        <picture><source srcset="assets/img/icons/phone-outgoing-02.webp" type="image/webp"><img src="assets/img/icons/phone-outgoing-02.png" alt="help btn"></picture>
                                     </div>
                                 </td>
                             </tr>
@@ -1684,10 +1693,10 @@
                                 <td>Agent</td>
                                 <td class="call-modal__icons">
                                     <div class="call-modal__image-container">
-                                        <picture><source srcset="./img/icons/information-circle.webp" type="image/webp"><img src="./img/icons/information-circle.png" alt="help btn"></picture>
+                                        <picture><source srcset="assets/img/icons/information-circle.webp" type="image/webp"><img src="assets/img/icons/information-circle.png" alt="help btn"></picture>
                                     </div>
                                     <div class="call-modal__image-container">
-                                        <picture><source srcset="./img/icons/phone-outgoing-02.webp" type="image/webp"><img src="./img/icons/phone-outgoing-02.png" alt="help btn"></picture>
+                                        <picture><source srcset="assets/img/icons/phone-outgoing-02.webp" type="image/webp"><img src="assets/img/icons/phone-outgoing-02.png" alt="help btn"></picture>
                                     </div>
                                 </td>
                             </tr>
@@ -1707,10 +1716,10 @@
                                 <td>Agent</td>
                                 <td class="call-modal__icons">
                                     <div class="call-modal__image-container">
-                                        <picture><source srcset="./img/icons/information-circle.webp" type="image/webp"><img src="./img/icons/information-circle.png" alt="help btn"></picture>
+                                        <picture><source srcset="assets/img/icons/information-circle.webp" type="image/webp"><img src="assets/img/icons/information-circle.png" alt="help btn"></picture>
                                     </div>
                                     <div class="call-modal__image-container">
-                                        <picture><source srcset="./img/icons/phone-outgoing-02.webp" type="image/webp"><img src="./img/icons/phone-outgoing-02.png" alt="help btn"></picture>
+                                        <picture><source srcset="assets/img/icons/phone-outgoing-02.webp" type="image/webp"><img src="assets/img/icons/phone-outgoing-02.png" alt="help btn"></picture>
                                     </div>
                                 </td>
                             </tr>
@@ -1739,7 +1748,7 @@
                         <button class="select__btn">
                             <p class="select__text">Today</p>
                             <div class="select__icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow">
+                                <svg width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow11">
                                     <path
                                         d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z">
                                     </path>
@@ -1765,7 +1774,7 @@
                         <button class="select__btn">
                             <p class="select__text">Newest</p>
                             <div class="select__icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow">
+                                <svg width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow12">
                                     <path
                                         d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z">
                                     </path>
@@ -1794,7 +1803,7 @@
                         <circle cx="11" cy="11" r="8"></circle>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
-                    <input type="search" name="search" id="log-search" placeholder="Search name or number">
+                    <input type="search" name="search" id="log-search1" placeholder="Search name or number">
                 </div>
             </div>
             <div class="modal-window__content">
@@ -1821,10 +1830,10 @@
                                 <td>-</td>
                                 <td class="call-modal__icons">
                                     <div class="call-modal__image-container">
-                                        <picture><source srcset="./img/icons/information-circle.webp" type="image/webp"><img src="./img/icons/information-circle.png" alt="help btn"></picture>
+                                        <picture><source srcset="assets/img/icons/information-circle.webp" type="image/webp"><img src="assets/img/icons/information-circle.png" alt="help btn"></picture>
                                     </div>
                                     <div class="call-modal__image-container">
-                                        <picture><source srcset="./img/icons/phone-outgoing-02.webp" type="image/webp"><img src="./img/icons/phone-outgoing-02.png" alt="help btn"></picture>
+                                        <picture><source srcset="assets/img/icons/phone-outgoing-02.webp" type="image/webp"><img src="assets/img/icons/phone-outgoing-02.png" alt="help btn"></picture>
                                     </div>
                                 </td>
                             </tr>
@@ -1837,10 +1846,10 @@
                                 <td>-</td>
                                 <td class="call-modal__icons">
                                     <div class="call-modal__image-container">
-                                        <picture><source srcset="./img/icons/information-circle.webp" type="image/webp"><img src="./img/icons/information-circle.png" alt="help btn"></picture>
+                                        <picture><source srcset="assets/img/icons/information-circle.webp" type="image/webp"><img src="assets/img/icons/information-circle.png" alt="help btn"></picture>
                                     </div>
                                     <div class="call-modal__image-container">
-                                        <picture><source srcset="./img/icons/phone-outgoing-02.webp" type="image/webp"><img src="./img/icons/phone-outgoing-02.png" alt="help btn"></picture>
+                                        <picture><source srcset="assets/img/icons/phone-outgoing-02.webp" type="image/webp"><img src="assets/img/icons/phone-outgoing-02.png" alt="help btn"></picture>
                                     </div>
                                 </td>
                             </tr>
@@ -1853,10 +1862,10 @@
                                 <td>-</td>
                                 <td class="call-modal__icons">
                                     <div class="call-modal__image-container">
-                                        <picture><source srcset="./img/icons/information-circle.webp" type="image/webp"><img src="./img/icons/information-circle.png" alt="help btn"></picture>
+                                        <picture><source srcset="assets/img/icons/information-circle.webp" type="image/webp"><img src="assets/img/icons/information-circle.png" alt="help btn"></picture>
                                     </div>
                                     <div class="call-modal__image-container">
-                                        <picture><source srcset="./img/icons/phone-outgoing-02.webp" type="image/webp"><img src="./img/icons/phone-outgoing-02.png" alt="help btn"></picture>
+                                        <picture><source srcset="assets/img/icons/phone-outgoing-02.webp" type="image/webp"><img src="assets/img/icons/phone-outgoing-02.png" alt="help btn"></picture>
                                     </div>
                                 </td>
                             </tr>
@@ -1869,10 +1878,10 @@
                                 <td>-</td>
                                 <td class="call-modal__icons">
                                     <div class="call-modal__image-container">
-                                        <picture><source srcset="./img/icons/information-circle.webp" type="image/webp"><img src="./img/icons/information-circle.png" alt="help btn"></picture>
+                                        <picture><source srcset="assets/img/icons/information-circle.webp" type="image/webp"><img src="assets/img/icons/information-circle.png" alt="help btn"></picture>
                                     </div>
                                     <div class="call-modal__image-container">
-                                        <picture><source srcset="./img/icons/phone-outgoing-02.webp" type="image/webp"><img src="./img/icons/phone-outgoing-02.png" alt="help btn"></picture>
+                                        <picture><source srcset="assets/img/icons/phone-outgoing-02.webp" type="image/webp"><img src="assets/img/icons/phone-outgoing-02.png" alt="help btn"></picture>
                                     </div>
                                 </td>
                             </tr>
@@ -1885,10 +1894,10 @@
                                 <td>-</td>
                                 <td class="call-modal__icons">
                                     <div class="call-modal__image-container">
-                                        <picture><source srcset="./img/icons/information-circle.webp" type="image/webp"><img src="./img/icons/information-circle.png" alt="help btn"></picture>
+                                        <picture><source srcset="assets/img/icons/information-circle.webp" type="image/webp"><img src="assets/img/icons/information-circle.png" alt="help btn"></picture>
                                     </div>
                                     <div class="call-modal__image-container">
-                                        <picture><source srcset="./img/icons/phone-outgoing-02.webp" type="image/webp"><img src="./img/icons/phone-outgoing-02.png" alt="help btn"></picture>
+                                        <picture><source srcset="assets/img/icons/phone-outgoing-02.webp" type="image/webp"><img src="assets/img/icons/phone-outgoing-02.png" alt="help btn"></picture>
                                     </div>
                                 </td>
                             </tr>
@@ -2026,7 +2035,7 @@
         <!-- NO CONNECTION ERROR MODAL ENDS  -->
 
         <!-- AGENT STATUS MODAL STARTS  -->
-        <div class="modal-window  table-width" id="agentStatusModal">
+        <div class="modal-window   agent-status" id="agentStatusModal">
             <div class="modal-window__heading">
                 <h3 class="modal-window__title">Agents Status</h3>
                 <button id="agentStatusCloseBtn">
@@ -2141,7 +2150,7 @@
                                     <li class="modal-sidebar__list-item">
                                         <div class="modal-sidebar__person">
                                             <div class="modal-sidebar__avatar avatar-icon">
-                                                <picture><source srcset="./img/Emoji.webp" type="image/webp"><img src="./img/Emoji.png" alt="user avatar"></picture>
+                                                <picture><source srcset="assets/img/Emoji.webp" type="image/webp"><img src="assets/img/Emoji.png" alt="user avatar"></picture>
                                             </div>
                                             <div class="modal-sidebar__person-info">
                                                 <p class="modal-sidebar__person-name">Group-1213</p>
@@ -2152,7 +2161,7 @@
                                     <li class="modal-sidebar__list-item">
                                         <div class="modal-sidebar__person">
                                             <div class="modal-sidebar__avatar avatar-icon">
-                                                <picture><source srcset="./img/Emoji2.webp" type="image/webp"><img src="./img/Emoji2.png" alt="user avatar"></picture>
+                                                <picture><source srcset="assets/img/Emoji2.webp" type="image/webp"><img src="assets/img/Emoji2.png" alt="user avatar"></picture>
                                             </div>
                                             <div class="modal-sidebar__person-info">
                                                 <p class="modal-sidebar__person-name">Group-1192</p>
@@ -2167,7 +2176,7 @@
                                     checked>
                                 <label class="modal-sidebar__channel-heading" for="personalInputCheckbox">
                                     <h4>Personal</h4>
-                                    <svg width="16" height="16" id="arrow">
+                                    <svg width="16" height="16" id="arrow1">
                                         <path
                                             style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;isolation:auto;mix-blend-mode:normal"
                                             fill="#34485c" fill-rule="evenodd"
@@ -2180,7 +2189,7 @@
                                     <li class="modal-sidebar__list-item active">
                                         <div class="modal-sidebar__person">
                                             <div class="modal-sidebar__avatar">
-                                                <picture><source srcset="./img/avatar-2.webp" type="image/webp"><img src="./img/avatar-2.png" alt="user avatar"></picture>
+                                                <picture><source srcset="assets/img/avatar-2.webp" type="image/webp"><img src="assets/img/avatar-2.png" alt="user avatar"></picture>
                                             </div>
                                             <div class="modal-sidebar__person-info">
                                                 <p class="modal-sidebar__person-name">Danny Sanchez</p>
@@ -2192,7 +2201,7 @@
                                     <li class="modal-sidebar__list-item">
                                         <div class="modal-sidebar__person">
                                             <div class="modal-sidebar__avatar">
-                                                <picture><source srcset="./img/avatar-3.webp" type="image/webp"><img src="./img/avatar-3.png" alt="user avatar"></picture>
+                                                <picture><source srcset="assets/img/avatar-3.webp" type="image/webp"><img src="assets/img/avatar-3.png" alt="user avatar"></picture>
                                             </div>
                                             <div class="modal-sidebar__person-info--channel">
                                                 <p class="modal-sidebar__person-name">Della Sicitra <span
@@ -2205,7 +2214,7 @@
                                     <li class="modal-sidebar__list-item">
                                         <div class="modal-sidebar__person">
                                             <div class="modal-sidebar__avatar">
-                                                <picture><source srcset="./img/avatar-4.webp" type="image/webp"><img src="./img/avatar-4.png" alt="user avatar"></picture>
+                                                <picture><source srcset="assets/img/avatar-4.webp" type="image/webp"><img src="assets/img/avatar-4.png" alt="user avatar"></picture>
                                             </div>
                                             <div class="modal-sidebar__person-info--channel">
                                                 <p class="modal-sidebar__person-name">Viola Junyla <span
@@ -2224,7 +2233,7 @@
                                     checked>
                                 <label class="modal-sidebar__channel-heading" for="toggleChannelsHidden">
                                     <h4>Channels</h4>
-                                    <svg width="16" height="16" id="arrow">
+                                    <svg width="16" height="16" id="arrow2">
                                         <path
                                             style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;isolation:auto;mix-blend-mode:normal"
                                             fill="#34485c" fill-rule="evenodd"
@@ -2237,7 +2246,7 @@
                                     <li class="modal-sidebar__list-item">
                                         <div class="modal-sidebar__person">
                                             <div class="modal-sidebar__avatar avatar-icon">
-                                                <picture><source srcset="./img/Emoji2.webp" type="image/webp"><img src="./img/Emoji2.png" alt="user avatar"></picture>
+                                                <picture><source srcset="assets/img/Emoji2.webp" type="image/webp"><img src="assets/img/Emoji2.png" alt="user avatar"></picture>
                                             </div>
                                             <div class="modal-sidebar__person-info--channel">
                                                 <p class="modal-sidebar__person-name">Group-1192</p>
@@ -2252,7 +2261,7 @@
                                     id="personalInputCheckboxHidden">
                                 <label class="modal-sidebar__channel-heading" for="personalInputCheckboxHidden">
                                     <h4>Personal</h4>
-                                    <svg width="16" height="16" id="arrow">
+                                    <svg width="16" height="16" id="arrow3">
                                         <path
                                             style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;isolation:auto;mix-blend-mode:normal"
                                             fill="#34485c" fill-rule="evenodd"
@@ -2265,7 +2274,7 @@
                                     <li class="modal-sidebar__list-item">
                                         <div class="modal-sidebar__person">
                                             <div class="modal-sidebar__avatar">
-                                                <picture><source srcset="./img/avatar-4.webp" type="image/webp"><img src="./img/avatar-4.png" alt="user avatar"></picture>
+                                                <picture><source srcset="assets/img/avatar-4.webp" type="image/webp"><img src="assets/img/avatar-4.png" alt="user avatar"></picture>
                                             </div>
                                             <div class="modal-sidebar__person-info--personal">
                                                 <p class="modal-sidebar__person-name">Viola Junyla <span
@@ -2301,7 +2310,7 @@
                         <div class="modal-message__heading">
                             <div class="modal-message__person">
                                 <div class="modal-message__avatar">
-                                    <picture><source srcset="./img/avatar-2.webp" type="image/webp"><img src="./img/avatar-2.png" alt="user avatar"></picture>
+                                    <picture><source srcset="assets/img/avatar-2.webp" type="image/webp"><img src="assets/img/avatar-2.png" alt="user avatar"></picture>
                                 </div>
                                 <div class="modal-message__person-data">
                                     <p class="modal-message__username">Danny Sanchez</p>
@@ -2323,7 +2332,7 @@
                                         </g>
                                     </g>
                                 </svg>
-                                <svg viewBox="0 0 24 24" id="search">
+                                <svg viewBox="0 0 24 24" id="search1">
                                     <g data-name="Layer 2">
                                         <path
                                             d="m20.71 19.29-3.4-3.39A7.92 7.92 0 0 0 19 11a8 8 0 1 0-8 8 7.92 7.92 0 0 0 4.9-1.69l3.39 3.4a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 11a6 6 0 1 1 6 6 6 6 0 0 1-6-6z"
@@ -2345,7 +2354,7 @@
                                         <div class="incoming-message__heading">
                                             <div class="incoming-message__user-data">
                                                 <div class="incoming-message__avatar">
-                                                    <picture><source srcset="./img/avatar-2.webp" type="image/webp"><img src="./img/avatar-2.png" alt="user avatar"></picture>
+                                                    <picture><source srcset="assets/img/avatar-2.webp" type="image/webp"><img src="assets/img/avatar-2.png" alt="user avatar"></picture>
                                                 </div>
                                                 <p class="incoming-message__username">Danny Sanchez</p>
                                             </div>
@@ -2383,7 +2392,7 @@
                                         <div class="incoming-message__heading">
                                             <div class="incoming-message__user-data">
                                                 <div class="incoming-message__avatar">
-                                                    <picture><source srcset="./img/avatar-2.webp" type="image/webp"><img src="./img/avatar-2.png" alt="user avatar"></picture>
+                                                    <picture><source srcset="assets/img/avatar-2.webp" type="image/webp"><img src="assets/img/avatar-2.png" alt="user avatar"></picture>
                                                 </div>
                                                 <p class="incoming-message__username">Danny Sanchez</p>
                                             </div>
@@ -2401,17 +2410,17 @@
                                 <textarea name="message" placeholder="Write message here..."></textarea>
                                 <div class="modal-message__input-icons">
                                     <div class="modal-message__icon-container">
-                                        <picture><source srcset="./img/icons/smile.webp" type="image/webp"><img src="./img/icons/smile.png" alt="smile"></picture>
+                                        <picture><source srcset="assets/img/icons/smile.webp" type="image/webp"><img src="assets/img/icons/smile.png" alt="smile"></picture>
                                     </div>
                                     <div class="modal-message__icon-container">
-                                        <picture><source srcset="./img/icons/image.webp" type="image/webp"><img src="./img/icons/image.png" alt="image icon"></picture>
+                                        <picture><source srcset="assets/img/icons/image.webp" type="image/webp"><img src="assets/img/icons/image.png" alt="image icon"></picture>
                                     </div>
                                     <div class="modal-message__icon-container">
-                                        <picture><source srcset="./img/icons/attechment.webp" type="image/webp"><img src="./img/icons/attechment.png" alt="image icon"></picture>
+                                        <picture><source srcset="assets/img/icons/attechment.webp" type="image/webp"><img src="assets/img/icons/attechment.png" alt="image icon"></picture>
                                     </div>
                                     <button class="modal-message__btn">
                                         <p>Send</p>
-                                        <picture><source srcset="./img/icons/send.webp" type="image/webp"><img src="./img/icons/send.png" alt="send icon "></picture>
+                                        <picture><source srcset="assets/img/icons/send.webp" type="image/webp"><img src="assets/img/icons/send.png" alt="send icon "></picture>
                                     </button>
 
                                 </div>
@@ -2537,7 +2546,7 @@
                             <div class="mdial-keyboard__number" id="n#">#</div>
                         </div>
                         <div class="mdial-keyboard__actions">
-                            <button class="mdial-keyboard__call-btn" id="callBtn">
+                            <button class="mdial-keyboard__call-btn" id="callBtn1">
                                 <div class="mdial-keyboard__call-btn-wrapper">
                                     <svg x="0" y="0" version="1.1" viewBox="0 0 29 29" xml:space="preserve">
                                         <path
@@ -2568,23 +2577,16 @@
         <!-- TOOLS SECTION STARTS (NEED DELETION)  -->
         <div class="tools">
             <div class="tools__list">
-                <button id="button1">Manual Dial</button>
                 <button id="button2">Dispo</button>
-                <button id="button3">Group Selection</button>
                 <button id="button4">Transfer</button>
-                <button id="button5">Agent call log</button>
-                <button id="button6">Calls in Queue</button>
-                <button id="button7">Call Channels</button>
                 <button id="button8">Call Channels Error</button>
                 <button id="button9">Connection Error</button>
                 <button id="button10">Agent Status</button>
-                <button id="button11">Message</button>
                 <button id="button12">Latency</button>
                 <button id="button13">Call1</button>
                 <button id="button14">Call2</button>
                 <button id="button15">Call3</button>
                 <button id="button16">mDial2</button>
-                <button id="button17">toggleSidebar</button>
             </div>
             <button class="tools__btn">TOOLS</button>
         </div>
@@ -2595,16 +2597,14 @@
     </main>
 
     <!-- BOOTSTRAP JS  -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js?_v=20240112133034"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
+    <script src="assets/files/libs/bootstrap/bootstrap.min.js?_v=20240115134754"></script>
 
     <!-- GSAP JS  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js?_v=20240112133034"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/Observer.min.js?_v=20240112133034"></script>
+    <script src="assets/files/libs/gsap/gsap.min.js?_v=20240115134754"></script>
+    <script src="assets/files/libs/gsap/Observer.min.js?_v=20240115134754"></script>
 
     <!-- CUSTOM SCRIPTS -->
-    <script defer src="js/app.min.js?_v=20240112133034"></script>
+    <script defer src="/assets/js/app.min.js?_v=20240115134754"></script>
 </body>
 
 </html>
